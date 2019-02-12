@@ -13,12 +13,15 @@ const Card = props =>
     props.photos.slice(0, props.limit).map(item => {
         return (
             <CardItem key={item.id}>
-                <img
-                    src={`https://farm${item.farm}.staticflickr.com/${
-                        item.server
-                    }/${item.id}_${item.secret}.jpg`}
-                    alt={item.id}
-                />
+                <div>
+                    <img
+                        src={`https://farm${item.farm}.staticflickr.com/${
+                            item.server
+                        }/${item.id}_${item.secret}.jpg`}
+                        alt={item.id}
+                    />
+                    {item.title}
+                </div>
             </CardItem>
         );
     });

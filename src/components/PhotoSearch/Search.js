@@ -7,14 +7,22 @@
 
 import React, { Component } from "react";
 
+/**
+ * Import styles
+ */
+import SearchWrapper from "./styles//Search";
+
 class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            term: ""
+            term: "" // search term
         };
     }
 
+    /**
+     * Function to handle input field change
+     */
     _handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value
@@ -23,15 +31,21 @@ class Search extends Component {
 
     render() {
         return (
-            <form onSubmit={e => this.props._handleSubmit(e, this.state.term)}>
-                <input
-                    type="text"
-                    name="term"
-                    onChange={this._handleChange}
-                    value={this.state.term}
-                />
-                <input type="submit" value="Search" />
-            </form>
+            <SearchWrapper>
+                <form
+                    onSubmit={e => this.props._handleSubmit(e, this.state.term)}
+                >
+                    <input
+                        type="text"
+                        name="term"
+                        onChange={this._handleChange}
+                        value={this.state.term}
+                        placeholder="Search Images"
+                        autoComplete="off"
+                    />
+                    <button type="submit">Search</button>
+                </form>
+            </SearchWrapper>
         );
     }
 }

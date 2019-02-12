@@ -22,6 +22,7 @@ import Search from "./Search";
 import Error from "./Error";
 import Loader from "./Loader";
 import Card from "./Card";
+import NoResults from "./NoResults";
 
 import { PhotoSearchWrapper, CardWrapper } from "./styles/PhotoSearch";
 
@@ -123,11 +124,13 @@ class PhotoSearch extends Component {
                 ) : this.state.loading ? (
                     // if loading is true render the loader component
                     <Loader />
+                ) : /**
+                 *  if loading is false render the card component
+                 *  pass the limt and photos array as props
+                 */
+                this.state.photos.length === 0 ? (
+                    <NoResults />
                 ) : (
-                    /**
-                     *  if loading is false render the card component
-                     *  pass the limt and photos array as props
-                     */
                     <CardWrapper>
                         <Card
                             limit={this.state.limit}

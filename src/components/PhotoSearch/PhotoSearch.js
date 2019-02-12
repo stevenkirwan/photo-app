@@ -125,12 +125,17 @@ class PhotoSearch extends Component {
                     // if loading is true render the loader component
                     <Loader />
                 ) : /**
-                 *  if loading is false render the card component
-                 *  pass the limt and photos array as props
+                 *  if loading is false check there's data in the photos array
+                 *  If not return no results component
                  */
+
                 this.state.photos.length === 0 ? (
                     <NoResults />
                 ) : (
+                    /**
+                     *  if there's data in the photos array render the card component
+                     *  pass the limt and photos array as props
+                     */
                     <CardWrapper>
                         <Card
                             limit={this.state.limit}

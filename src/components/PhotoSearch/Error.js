@@ -7,6 +7,8 @@
 
 import React from "react";
 
-const Error = () => <p>Something went wrong....</p>;
+import ErrorWrapper from "./styles/ErrorWrapper";
+
+const Error = () => <ErrorWrapper>Something went wrong....Please try again</ErrorWrapper>;
 
 export default Error;

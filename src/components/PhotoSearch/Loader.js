@@ -7,6 +7,8 @@
 
 import React from "react";
 
-const Loader = () => <p>Loading....</p>;
+import ErrorWrapper from "./styles/ErrorWrapper";
+
+const Loader = () => <ErrorWrapper>Loading....</ErrorWrapper>;
 
 export default Loader;

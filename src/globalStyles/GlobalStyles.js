@@ -114,10 +114,11 @@ p {
   }
 
   a {
-	color: #008755;
+	color: #0696a6;
 	&:visited,
 	&:hover,
 	&:active {
+    color:#047a87;
 		text-decoration: none;
   }
 }

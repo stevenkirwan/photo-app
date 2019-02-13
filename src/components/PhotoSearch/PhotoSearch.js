@@ -42,7 +42,7 @@ class PhotoSearch extends Component {
         window.addEventListener("scroll", this._handleScroll);
 
         // API url with hard coded serach term
-        const URL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=snow&text=snow&extra=url_n&api_key=4c4c949d05abc5434e054a68b10c1e6e&format=json&nojsoncallback=1`;
+        const URL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=snow&extras=date_taken,tags&api_key=4c4c949d05abc5434e054a68b10c1e6e&format=json&nojsoncallback=1`;
 
         // API request
         axios
@@ -80,7 +80,7 @@ class PhotoSearch extends Component {
         });
 
         // Make the API request
-        const URL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=4c4c949d05abc5434e054a68b10c1e6e&tags=${term}&text=${term}&format=json&nojsoncallback=1`;
+        const URL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&extras=date_taken,tags&api_key=4c4c949d05abc5434e054a68b10c1e6e&tags=${term}&format=json&nojsoncallback=1`;
         axios
             .get(URL)
             .then(response => {
@@ -140,6 +140,7 @@ class PhotoSearch extends Component {
                         <Card
                             limit={this.state.limit}
                             photos={this.state.photos}
+                            isVisible={false}
                         />
                     </CardWrapper>
                 )}

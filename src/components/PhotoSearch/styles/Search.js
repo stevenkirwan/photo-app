@@ -6,14 +6,14 @@ const SearchWrapper = styled.div`
     background-image: url("https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3238&q=80");
     margin-bottom: 5rem;
     padding: 15% 20%;
-    @media (max-width: ${props => props.theme.$largeTabletBreakpoint}) {
+    @media (max-width: ${props => props.theme.$tabletBreakpoint}) {
         padding: 20% 8%;
     }
     form {
         display: flex;
         margin: 0 auto;
         max-width: 960px;
-        @media (max-width: ${props => props.theme.$largeTabletBreakpoint}) {
+        @media (max-width: ${props => props.theme.$tabletBreakpoint}) {
             flex-direction: column;
         }
     }
@@ -35,7 +35,7 @@ const SearchWrapper = styled.div`
         transition: border ease-in-out;
         width: 75%;
 
-        @media (max-width: ${props => props.theme.$largeTabletBreakpoint}) {
+        @media (max-width: ${props => props.theme.$tabletBreakpoint}) {
             border-radius: 0;
             padding: 1.3rem 2rem;
             width: 100%;
@@ -60,7 +60,7 @@ const SearchWrapper = styled.div`
             border: 1px solid ${props => props.theme.$primaryDark};
         }
 
-        @media (max-width: ${props => props.theme.$largeTabletBreakpoint}) {
+        @media (max-width: ${props => props.theme.$tabletBreakpoint}) {
             border-radius: 0;
             margin-top: 1rem;
             width: 100%;

@@ -14,7 +14,7 @@ const CardWrapper = styled.section`
     justify-content:space-evenly;
     align-items:center;
 
-    @media (max-width: ${props => props.theme.$largeTabletBreakpoint}) {
+    @media (max-width: ${props => props.theme.$tabletBreakpoint}) {
         flex-direction:column;
         padding:0 2rem;
         margin:0;

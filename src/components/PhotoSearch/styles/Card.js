@@ -10,7 +10,7 @@ const CardItem = styled(FadeIn)`
     margin:2rem 0;
     overflow:hidden;
     width: calc(25% - 3rem);
-    @media (max-width: ${props => props.theme.$largeTabletBreakpoint}) {
+    @media (max-width: ${props => props.theme.$tabletBreakpoint}) {
         margin: 0;
         padding-bottom: 3rem;
         width: 100%;
@@ -19,7 +19,7 @@ const CardItem = styled(FadeIn)`
         object-fit: cover;
         height: 320px;
         width: 100%;
-        @media (max-width: ${props => props.theme.$largeTabletBreakpoint}) {
+        @media (max-width: ${props => props.theme.$tabletBreakpoint}) {
             height: auto;
         }
     }
